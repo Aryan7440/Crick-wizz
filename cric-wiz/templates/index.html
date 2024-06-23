@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Points Predictor</title>
+    <style>
+      body {
+        background-image: url('../static/images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+      img.logo {
+        width: 70px;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin: 0;
+      }
+
+      form {
+        width: 50%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      select,
+      input[type='submit'] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      select:focus,
+      input[type='submit']:hover {
+        outline: none;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img class="logo" src="../static/images/logo.webp" alt="Logo" />Team
+      selector for fantasy leagues
+    </h1>
+    <form action="/predict" method="post">
+      <label for="team_name">Select a Team:</label>
+      <br />
+      <select name="team_name" id="team_name">
+        <option value="Chennai Super Kings">Chennai Super Kings</option>
+        <option value="Gujarat Titans">Gujarat Titans</option>
+        <option value="Punjab Kings">Punjab Kings</option>
+        <option value="Delhi Capitals">Delhi Capitals</option>
+        <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        <option value="Mumbai Indians">Mumbai Indians</option>
+        <option value="Royal Challengers Bangalore">
+          Royal Challengers Bangalore
+        </option>
+        <option value="Rajasthan Royals">Rajasthan Royals</option></select
+      ><br />
+
+      <label for="team2">Select a Team:</label>
+      <br />
+      <select name="team2" id="team2">
+        <option value="Chennai Super Kings">Chennai Super Kings</option>
+        <option value="Gujarat Titans">Gujarat Titans</option>
+        <option value="Punjab Kings">Punjab Kings</option>
+        <option value="Delhi Capitals">Delhi Capitals</option>
+        <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        <option value="Mumbai Indians">Mumbai Indians</option>
+        <option value="Royal Challengers Bangalore">
+          Royal Challengers Bangalore
+        </option>
+        <option value="Rajasthan Royals">Rajasthan Royals</option></select
+      ><br />
+
+      <label for="venue">Select a venue:</label>
+      <br />
+      <select name="venue" id="venue">
+        <option value="Narendra Modi Stadium">Narendra Modi Stadium</option>
+        <option value="Punjab Cricket Association Stadium">
+          Punjab Cricket Association Stadium
+        </option>
+        <option value="Arun Jaitley Stadium">Arun Jaitley Stadium</option>
+        <option value="Barabati Stadium">Barabati Stadium</option>
+        <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+        <option value="MA Chidambaram Stadium">MA Chidambaram Stadium</option>
+        <option value="Wankhede Stadium">Wankhede Stadium</option>
+        <option
+          value="Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium"
+        >
+          Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium
+        </option></select
+      ><br />
+
+      <input type="submit" value="Predict" />
+    </form>
+  </body>
+</html>
+<!-- , ,
+       'Barsapara Cricket Stadium',
+       'Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium',
+       'Brabourne Stadium', 'Buffalo Park', 'De Beers Diamond Oval',
+       'Dr DY Patil Sports Academy',
+       'Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium',
+       'Dubai International Cricket Stadium', 'Eden Gardens',
+       'Green Park', 'Himachal Pradesh Cricket Association Stadium',
+       'Holkar Cricket Stadium', 'JSCA International Stadium Complex',
+       'Kingsmead', 'M Chinnaswamy Stadium', 'MA Chidambaram Stadium',
+       'Maharashtra Cricket Association Stadium', 'Narendra Modi Stadium',
+       'Nehru Stadium', 'New Wanderers Stadium', 'Newlands',
+       'OUTsurance Oval', 'Punjab Cricket Association Stadium',
+       'Rajiv Gandhi International Stadium',
+       'Saurashtra Cricket Association Stadium', 'Sawai Mansingh Stadium',
+       'Shaheed Veer Narayan Singh International Stadium',
+       'Sharjah Cricket Stadium', 'Sheikh Zayed Stadium',
+       "St George's Park", 'Subrata Roy Sahara Stadium',
+       'SuperSport Park', 'Vidarbha Cricket Association Stadium',
+       'Wankhede Stadium', 'Zayed Cricket Stadium' -->

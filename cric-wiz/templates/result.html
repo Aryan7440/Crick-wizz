@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Player Points Prediction Results</title>
+    <style>
+      /* Apply CSS to body for background color */
+      body {
+        background-image: url('../static/images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+
+      /* Style the h1 tag for title */
+      h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #333; /* Navbar background color */
+        color: white;
+        margin: 0;
+      }
+      h2 {
+        text-align: center;
+        padding: 20px;
+        background-color: #333; /* Navbar background color */
+        color: white;
+        margin: 0;
+      }
+
+      /* Style for the table */
+      table {
+        width: 70%; /* Adjust the table width as needed */
+        margin: 20px auto; /* Center the table */
+        border-collapse: collapse;
+      }
+
+      /* Style for the table headers */
+      th {
+        background-color: #333; /* Header background color */
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      /* Style for the table cells */
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+
+      /* Alternate row background color */
+      tr {
+        background-color: #f2f2f2; /* Alternate row color */
+      }
+      img.logo {
+        width: 70px; /* Adjust the width of the logo as needed */
+        vertical-align: middle; /* Align the logo vertically with text */
+        margin-right: 15px; /* Add spacing between the image and text */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img class="logo" src="../static/images/logo.webp" alt="Logo" />Team
+      selector for fantasy leagues
+    </h1>
+    <h2>Predicted Dream 11 points</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Team</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for player in players %}
+        <tr>
+          <td>{{ player[0] }}</td>
+          <td>{{ player[1] }}</td>
+          <td>{{ player[2] }}</td>
+          <td>{{ player[3] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
